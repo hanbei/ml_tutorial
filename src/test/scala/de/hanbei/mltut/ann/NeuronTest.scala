@@ -1,20 +1,21 @@
 package de.hanbei.mltut.ann
 
-import org.scalatest.FunSuite
+import org.scalatest.{BeforeAndAfter, FunSuite}
 import org.scalatest.matchers.ShouldMatchers
 import org.junit.runner.RunWith
 import org.scalatest.junit.JUnitRunner
 
 /**
- * Created with IntelliJ IDEA.
- * User: hanbei
- * Date: 9/4/13
- * Time: 8:50 PM
- * To change this template use File | Settings | File Templates.
- */
+  */
 @RunWith(classOf[JUnitRunner])
-class NeuronTest extends Neuron(x => x) with FunSuite with ShouldMatchers {
+class NeuronTest extends Neuron(identity, 20) with FunSuite with ShouldMatchers with BeforeAndAfter {
 
-  var weights: Array[Double] = new Array(20).map(x => 1.0)
+  before {
+    weights = weights.map(x => 1.0)
+  }
+
+  test("linear neuron sums inputs correctly") {
+    compute(Array.range(0, 20).map(x => x * 1.0)) should be(190.0)
+  }
 
 }
