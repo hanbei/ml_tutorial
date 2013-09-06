@@ -2,3 +2,9 @@
 ml_tut2.iml
 out
 .gradle
+/build
+/bin
+.classpath
+.project
+.settings/
+.cache

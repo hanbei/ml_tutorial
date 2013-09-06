@@ -9,8 +9,7 @@ package de.hanbei.mltut.ann
  */
 object identity extends Function1[Double, Double] {
 
-  def apply(value: Double): Double = value
+  def apply(value : Double) : Double = value
 
 }
-
 
