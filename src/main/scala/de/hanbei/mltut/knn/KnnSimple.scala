@@ -11,11 +11,11 @@ class KnnSimple {
 
   var trainData: List[Array[Double]] = null
 
-  def train(trainData: List[Array[Double]]) {
+  def train(trainData : List[Array[Double]]) {
     this.trainData = trainData
   }
 
-  def nearestNeighbour(k: Int, point: Array[Double]) : List[Array[Double]] = {
+  def nearestNeighbour(k: Int, point: Array[Double]): List[Array[Double]] = {
     nearestNeighbour(k, point, (x, y) => Math.sqrt(x.zip(y).map(pair => (pair._1 - pair._2) * (pair._1 - pair._2)).sum))
   }
 
