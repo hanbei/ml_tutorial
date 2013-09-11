@@ -8,7 +8,7 @@ class Neuron(transferFunction : Double => Double, inputSize : Int) {
 
     var weights : Array[Double] = new Array[Double](inputSize)
 
-    def compute(input : Array[Double]) : Double = {
+    def compute(input : Seq[Double]) : Double = {
         transferFunction(input.zip(weights).map(x => x._1 * x._2).sum)
     }
 
