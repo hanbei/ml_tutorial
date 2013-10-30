@@ -4,6 +4,7 @@ import org.scalatest.{BeforeAndAfter, FunSuite}
 import org.scalatest.matchers.ShouldMatchers
 import org.junit.runner.RunWith
 import org.scalatest.junit.JUnitRunner
+import de.hanbei.mltut.ann.activityfunctions.identity
 
 /**
   */

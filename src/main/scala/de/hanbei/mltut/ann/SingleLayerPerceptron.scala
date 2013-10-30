@@ -1,10 +1,10 @@
-package de.hanbei.mltut.ann.perceptron
+package de.hanbei.mltut.ann
 
 import de.hanbei.mltut.ann.Neuron
 
 /**
   */
-class Perceptron(inputSize : Int) extends Neuron(x => if (x >= 0.5) 1 else 0, inputSize + 1) {
+class SingleLayerPerceptron(inputSize : Int) extends Neuron(x => if (x >= 0.5) 1 else 0, inputSize + 1) {
   var learningRate : Double = 0.1
 
   override def compute(input : Seq[Double]) : Double = super.compute(List(1.0) ++ input)
@@ -15,7 +15,6 @@ class Perceptron(inputSize : Int) extends Neuron(x => if (x >= 0.5) 1 else 0, in
       for ((dataPoint, label) <- data.zip(labels)) {
 
         val adjustedData = List(1.0) ++ dataPoint
-
         val currentOutput = compute(dataPoint)
         val error = label - currentOutput
 
