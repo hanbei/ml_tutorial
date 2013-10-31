@@ -1,5 +1,7 @@
 package de.hanbei.mltut.ann
 
-class NeuralNetwork {
+class NeuralNetwork(learningRate: Double) {
+
+  val layers: List[Layer] = List()
 
 }
