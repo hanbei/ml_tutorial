@@ -1,7 +1,9 @@
 package de.hanbei.mltut.ann
 
-class Layer(inputSize : Int, numNeurons : Int) {
+import de.hanbei.mltut.ann.activityfunctions.sigmoid
 
-  val neurons : List[Neuron] = List()
+class Layer(inputSize : Int, numNeurons : Int, function : Double => Double = sigmoid) {
+
+  val neurons : List[Neuron] = List.fill(numNeurons)(new Neuron(function, inputSize))
 
 }

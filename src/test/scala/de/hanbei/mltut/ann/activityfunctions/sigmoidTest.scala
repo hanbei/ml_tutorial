@@ -1,4 +1,4 @@
-package de.hanbei.mltut.ann
+package de.hanbei.mltut.ann.activityfunctions
 
 import org.scalatest.FunSuite
 import org.scalatest.matchers.ShouldMatchers
